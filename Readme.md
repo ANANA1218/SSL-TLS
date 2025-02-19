@@ -11,7 +11,7 @@ Ce projet est un scanner de vulnérabilités SSL/TLS développé en Python. Il p
 - Recommandations pour améliorer la sécurité
 
 ## Diagramme de séquence
-![alt text](images/Diagramme de sequence.png)
+![alt text](images/Diagramme_sequence.png)
 
 Acteurs principaux :
 
