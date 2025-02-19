@@ -1,4 +1,4 @@
- # Scanner de vulnérabilités SSL/TLS
+# Scanner de vulnérabilités SSL/TLS
 
 ## Description
 Ce projet est un scanner de vulnérabilités SSL/TLS développé en Python. Il permet d'analyser la configuration SSL/TLS d'un serveur cible, de détecter les vulnérabilités potentielles et de générer un rapport détaillé. De plus, il intègre une fonctionnalité de scan de ports ouverts en utilisant Nmap.
@@ -25,6 +25,7 @@ Acteurs principaux :
 - Python 3.6+
 - pip (gestionnaire de paquets Python)
 - Nmap
+- Docker (pour la conteneurisation)
 
 ## Installation de Nmap (Windows)
 1. Téléchargez l'installateur Nmap pour Windows depuis le site officiel : https://nmap.org/download.html#windows
@@ -63,8 +64,6 @@ Exemple 2 :
 
 4. Le script effectuera l'analyse et affichera les résultats dans la console.
 
-
-
 ## Utilisation de vulnerability_scanner
 1. Assurez-vous que Nmap est correctement installé et accessible depuis la ligne de commande.
 2. Exécutez le script principal :
@@ -84,6 +83,47 @@ Exemple 2 :
 
 4. Le script effectuera l'analyse et affichera les résultats dans la console.
 
+## Conteneurisation avec Docker
+
+### Prérequis
+- Docker installé sur votre système
+
+### Fichiers de configuration Docker
+Vous aurez besoin de deux fichiers :
+- `Dockerfile` : Définit l'environnement et les instructions pour construire l'image Docker.
+- `docker-compose.yml` : Définit les services, les volumes et la configuration réseau pour l'application.
+
+Consultez les exemples de `Dockerfile` et `docker-compose.yml` dans le dépôt.
+
+### Construction et exécution du conteneur
+1. Construisez l'image Docker :
+   ```
+   docker-compose build
+   ```
+Resultat au lancement de la commande :
+
+![alt text](images/compose-build.png)
+
+Resultat dans le docker desktop:
+
+![alt text](images/docker-image.png)
+
+2. Exécutez le conteneur :
+   ```
+   docker-compose up
+   ```
+
+Resultat au lancement de la commande :
+
+![alt text](images/compose-up.png)
+
+Resultat dans le docker desktop:
+
+![alt text](images/up.png)
+
+![alt text](images/console.png)
+
+Ces commandes vont construire et lancer le conteneur Docker avec votre scanner SSL/TLS.
 
 ## Avertissement
 Ce scanner est conçu à des fins éducatives et de test. Assurez-vous d'avoir l'autorisation appropriée avant de scanner des systèmes qui ne vous appartiennent pas.
