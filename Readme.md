@@ -44,7 +44,12 @@ Ce projet est un scanner de vulnérabilités SSL/TLS développé en Python. Il p
 
 3. Suivez les instructions à l'écran pour entrer le nom de domaine et le port à scanner.
 
-![alt text](image.png)
+Exemple 1 :
+![alt text](images/image.png)
+
+Exemple 2 :
+
+![alt text](images/image1.png)
 
 4. Le script effectuera l'analyse et affichera les résultats dans la console.
 
