@@ -45,7 +45,7 @@ Acteurs principaux :
    pip install -r requirements.txt
    ```
 
-## Utilisation
+## Utilisation de ssl-tls-scanner
 1. Assurez-vous que Nmap est correctement installé et accessible depuis la ligne de commande.
 2. Exécutez le script principal :
    ```
@@ -62,6 +62,28 @@ Exemple 2 :
 ![alt text](images/image1.png)
 
 4. Le script effectuera l'analyse et affichera les résultats dans la console.
+
+
+
+## Utilisation de vulnerability_scanner
+1. Assurez-vous que Nmap est correctement installé et accessible depuis la ligne de commande.
+2. Exécutez le script principal :
+   ```
+   python vulnerability_scanner.py
+   ```
+
+3. Suivez les instructions à l'écran pour entrer le nom de domaine et le port à scanner.
+
+Exemple 1 :
+
+![alt text](images/scan1.png)
+
+Exemple 2 :
+
+![alt text](images/scan2.png)
+
+4. Le script effectuera l'analyse et affichera les résultats dans la console.
+
 
 ## Avertissement
 Ce scanner est conçu à des fins éducatives et de test. Assurez-vous d'avoir l'autorisation appropriée avant de scanner des systèmes qui ne vous appartiennent pas.
