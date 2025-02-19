@@ -125,5 +125,48 @@ Resultat dans le docker desktop:
 
 Ces commandes vont construire et lancer le conteneur Docker avec votre scanner SSL/TLS.
 
+### Publication sur Docker Hub
+
+1. **Créez un compte Docker Hub** : Si vous n'en avez pas déjà un, créez un compte sur [Docker Hub](https://hub.docker.com/).
+
+2. **Connectez-vous à Docker Hub** depuis votre terminal :
+
+   ```
+   docker login
+   ```
+
+![alt text](images/)
+
+
+3. **Taguez votre image** avec votre nom d'utilisateur Docker Hub :
+
+   ```
+   docker tag votre-image:tag votre-username/votre-repo:tag
+   ```
+
+![alt text](images/)
+
+Remplacez `<image-id>` par l'ID de votre image Docker, `<votre-nom-d'utilisateur>` par votre nom d'utilisateur Docker Hub, `<nom-du-repo>` par le nom de votre repository, et `<tag>` par le tag de votre image (par exemple, `latest`).
+
+4. **Poussez l'image** taguée vers Docker Hub :
+
+   ```
+   docker push votre-username/votre-repo:tag
+   ```
+
+![alt text](images/)
+
+
+5. **Vérifiez la publication** : Sur le site Docker Hub, vérifiez que votre image a bien été publiée dans votre repository.
+
+![alt text](images/)
+
+
+### Test Unitaire 
+
+
+### GitHub Action
+
+
 ## Avertissement
 Ce scanner est conçu à des fins éducatives et de test. Assurez-vous d'avoir l'autorisation appropriée avant de scanner des systèmes qui ne vous appartiennent pas.
