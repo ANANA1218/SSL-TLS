@@ -125,7 +125,7 @@ Resultat dans le docker desktop:
 
 Ces commandes vont construire et lancer le conteneur Docker avec votre scanner SSL/TLS.
 
-### Publication sur Docker Hub
+## Publication sur Docker Hub
 
 1. **Créez un compte Docker Hub** : Si vous n'en avez pas déjà un, créez un compte sur [Docker Hub](https://hub.docker.com/).
 
@@ -162,10 +162,10 @@ Remplacez `<image-id>` par l'ID de votre image Docker, `<votre-nom-d'utilisateur
 ![alt text](images/)
 
 
-### Test Unitaire 
+## Test Unitaire 
 
 
-### GitHub Action
+## GitHub Action
 
 
 ## Avertissement
