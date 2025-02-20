@@ -1,7 +1,7 @@
-# Scanner de vulnérabilités SSL/TLS
+# Scanneur de vulnérabilités SSL/TLS
 
 ## Description
-Ce projet est un scanner de vulnérabilités SSL/TLS développé en Python. Il permet d'analyser la configuration SSL/TLS d'un serveur cible, de détecter les vulnérabilités potentielles et de générer un rapport détaillé. De plus, il intègre une fonctionnalité de scan de ports ouverts en utilisant Nmap.
+Ce projet est un scanneur de vulnérabilités SSL/TLS développé en Python. Il permet d'analyser la configuration SSL/TLS d'un serveur cible, de détecter les vulnérabilités potentielles et de générer un rapport détaillé. De plus, il intègre une fonctionnalité de scan de ports ouverts en utilisant Nmap.
 
 ## Fonctionnalités
 - Analyse de la configuration SSL/TLS d'un serveur
@@ -19,7 +19,7 @@ Ce projet est un scanner de vulnérabilités SSL/TLS développé en Python. Il p
 Acteurs principaux :
 
    -Utilisateur : Lance le scan et reçoit le rapport.
-   -Scanner SSL/TLS : Exécute l'analyse et détecte les vulnérabilités.
+   -Scanneur SSL/TLS : Exécute l'analyse et détecte les vulnérabilités.
    -Nmap : Scanne les ports ouverts.
    -Base de Données des Vulnérabilités : Fournit la liste des vulnérabilités connues.
 
@@ -49,14 +49,14 @@ Acteurs principaux :
    pip install -r requirements.txt
    ```
 
-## Utilisation de ssl-tls-scanner
+## Utilisation de ssl-tls-scanneur
 1. Assurez-vous que Nmap est correctement installé et accessible depuis la ligne de commande.
 2. Exécutez le script principal :
    ```
-   python ssl_tls_scanner.py
+   python ssl_tls_scanneur.py
    ```
 
-3. Suivez les instructions à l'écran pour entrer le nom de domaine et le port à scanner.
+3. Suivez les instructions à l'écran pour entrer le nom de domaine et le port à scanneur.
 
 Exemple 1 :
 ![alt text](images/image.png)
@@ -67,14 +67,14 @@ Exemple 2 :
 
 4. Le script effectuera l'analyse et affichera les résultats dans la console.
 
-## Utilisation de vulnerability_scanner
+## Utilisation de vulnerability_scanneur
 1. Assurez-vous que Nmap est correctement installé et accessible depuis la ligne de commande.
 2. Exécutez le script principal :
    ```
-   python vulnerability_scanner.py
+   python vulnerability_scanneur.py
    ```
 
-3. Suivez les instructions à l'écran pour entrer le nom de domaine et le port à scanner.
+3. Suivez les instructions à l'écran pour entrer le nom de domaine et le port à scanneur.
 
 Exemple 1 :
 
@@ -126,7 +126,7 @@ Resultat dans le docker desktop:
 
 ![alt text](images/console.png)
 
-Ces commandes vont construire et lancer le conteneur Docker avec votre scanner SSL/TLS.
+Ces commandes vont construire et lancer le conteneur Docker avec votre scanneur SSL/TLS.
 
 ## Publication sur Docker Hub
 
@@ -138,7 +138,7 @@ Ces commandes vont construire et lancer le conteneur Docker avec votre scanner S
    docker login
    ```
 
-![alt text](images/)
+![alt text](images/docker_login.png)
 
 
 3. **Taguez votre image** avec votre nom d'utilisateur Docker Hub :
@@ -146,8 +146,6 @@ Ces commandes vont construire et lancer le conteneur Docker avec votre scanner S
    ```
    docker tag votre-image:tag votre-username/votre-repo:tag
    ```
-
-![alt text](images/)
 
 Remplacez `<image-id>` par l'ID de votre image Docker, `<votre-nom-d'utilisateur>` par votre nom d'utilisateur Docker Hub, `<nom-du-repo>` par le nom de votre repository, et `<tag>` par le tag de votre image (par exemple, `latest`).
 
@@ -157,13 +155,7 @@ Remplacez `<image-id>` par l'ID de votre image Docker, `<votre-nom-d'utilisateur
    docker push votre-username/votre-repo:tag
    ```
 
-![alt text](images/)
-
-
 5. **Vérifiez la publication** : Sur le site Docker Hub, vérifiez que votre image a bien été publiée dans votre repository.
-
-![alt text](images/)
-
 
 ## Test Unitaire 
 
@@ -172,4 +164,4 @@ Remplacez `<image-id>` par l'ID de votre image Docker, `<votre-nom-d'utilisateur
 
 
 ## Avertissement
-Ce scanner est conçu à des fins éducatives et de test. Assurez-vous d'avoir l'autorisation appropriée avant de scanner des systèmes qui ne vous appartiennent pas.
+Ce scanneur est conçu à des fins éducatives et de test. Assurez-vous d'avoir l'autorisation appropriée avant de scanneur des systèmes qui ne vous appartiennent pas.
