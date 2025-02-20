@@ -10,6 +10,9 @@ Ce projet est un scanner de vulnérabilités SSL/TLS développé en Python. Il p
 - Scan des ports ouverts sur le serveur cible
 - Recommandations pour améliorer la sécurité
 
+## Worflow
+![alt text](images/Workflow_Diagram.png)
+
 ## Diagramme de séquence
 ![alt text](images/Diagramme_sequence.png)
 
