@@ -1,10 +1,21 @@
+# Version de Docker Compose utilisée
 version: '3'
+
+# Définition des services
 services:
+  # Nom du service
   ssl_scanner:
+    # Utilisation du Dockerfile dans le répertoire courant pour construire l'image
     build: .
+    
+    # Variables d'environnement passées au conteneur
     environment:
-      - HOSTNAME=${HOSTNAME}
-      - PORT=${PORT}
+      - HOSTNAME=${HOSTNAME}  # Nom d'hôte à scanner, défini dans le fichier .env
+      - PORT=${PORT}          # Port à scanner, défini dans le fichier .env
+    
+    # Montage de volumes
     volumes:
-      - .:/app
-    network_mode: host
+      - .:/app  # Monte le répertoire courant dans le conteneur à /app
+    
+    # Configuration réseau
+    network_mode: host  # Utilise le réseau de l'hôte pour le conteneur
