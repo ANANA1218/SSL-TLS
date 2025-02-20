@@ -160,5 +160,3 @@ Remplacez `<image-id>` par l'ID de votre image Docker, `<votre-nom-d'utilisateur
 ## GitHub Action
 
 
-## Avertissement
-Ce scanneur est conçu à des fins éducatives et de test. Assurez-vous d'avoir l'autorisation appropriée avant de scanneur des systèmes qui ne vous appartiennent pas.
