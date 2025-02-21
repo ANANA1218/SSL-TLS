@@ -278,7 +278,7 @@ Vous pouvez également déclencher le workflow manuellement depuis l'onglet **Ac
 
 ## Ajout du Badge GitHub Actions
 ```markdown
-![Tests Unitaires](https://github.com/ANANA1218/SSL-TLS/.github/workflows/ci.yml/badge.svg)
+![Tests Unitaires](https://github.com/ANANA1218/SSL-TLS/actions/workflows/ci.yml/badge.svg)
 ```
 
 
