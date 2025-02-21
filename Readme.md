@@ -170,7 +170,7 @@ Remplacez `<image-id>` par l'ID de votre image Docker, `<votre-nom-d'utilisateur
 
 Cette section décrit la procédure de test unitaire pour le projet de scanner de vulnérabilités SSL/TLS. Les tests couvrent les fonctionnalités principales des fichiers `ssl_tls_scanner.py` et `vulnerability_scanner.py` en utilisant le module `unittest` de Python.
 
-## Structure des Tests
+1. Structure des Tests
 - **tests/test_ssl_tls_scanner.py** :
   - Vérifie l'analyse SSL/TLS, la détection de vulnérabilités et la génération de rapports.
   - Simule des connexions SSL et des résultats Nmap.
@@ -179,7 +179,7 @@ Cette section décrit la procédure de test unitaire pour le projet de scanner d
   - Vérifie la détection des vulnérabilités Heartbleed et POODLE.
   - Teste le scan des ports et la génération de rapports.
 
-## Exécution des Tests
+2. Exécution des Tests
 Pour exécuter tous les tests, utilisez la commande suivante à la racine du projet :
 ```bash
 pytest tests/
@@ -191,13 +191,41 @@ python -m unittest tests/test_ssl_tls_scanner.py
 python -m unittest tests/test_vulnerability_scanner.py
 ```
 
-## Rapports de Tests
+3. Rapports de Tests
 Pour générer un rapport de test détaillé avec pytest, utilisez :
 ```bash
 pytest tests/ --tb=long --maxfail=3 -v
 ```
 
 ## GitHub Action
+
+### Structure du Workflow
+Le workflow GitHub Actions permet d'exécuter automatiquement les tests unitaires à chaque push ou pull request sur la branche `main` ou `master`.
+
+### Chemin du Fichier
+`.github/workflows/ci.yml`
+
+### Contenu du Workflow
+- **Nom du workflow :** `CI - Tests Unitaires SSL/TLS Scanner`
+- **Plateforme :** Ubuntu-latest
+- **Versions Python :** 3.8, 3.9, 3.10
+- **Outils :** pytest pour les tests unitaires
+
+### Étapes du Workflow
+1. **Checkout du code** : Récupère le code source du dépôt GitHub.
+2. **Installation de Python** : Configure la version spécifiée de Python.
+3. **Installation des dépendances** : Installe les dépendances listées dans `requirements.txt`.
+4. **Exécution des tests** : Lance `pytest` avec des options de rapport détaillé.
+
+### Lancer le Workflow Manuellement
+Vous pouvez également déclencher le workflow manuellement depuis l'onglet **Actions** de GitHub.
+
+## Ajout du Badge GitHub Actions
+Pour afficher le statut des tests dans votre README, ajoutez cette ligne :
+```markdown
+![Tests Unitaires](https://github.com/ANANA1218/SSL-TLS/.github/workflows/ci.yml/badge.svg)
+```
+
 
 
 ## Avertissement
