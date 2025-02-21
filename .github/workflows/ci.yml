@@ -16,10 +16,15 @@ jobs:
   test:
     name: Exécuter les Tests Unitaires
     runs-on: ubuntu-22.04  # Utilise une version stable d'Ubuntu
+    timeout-minutes: 15
 
     strategy:
       matrix:
         python-version: [3.8, 3.9]  # Exécute les tests sur plusieurs versions de Python
+
+    concurrency:
+      group: ci-${{ github.ref }}
+      cancel-in-progress: false
 
     steps:
     - name: Nettoyer le cache de GitHub Actions
