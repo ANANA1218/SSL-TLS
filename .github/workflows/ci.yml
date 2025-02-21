@@ -1,0 +1,40 @@
+# .github/workflows/ci.yml
+name: CI - Tests Unitaires SSL/TLS Scanner
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:  # Permet de déclencher manuellement le workflow
+
+jobs:
+  test:
+    name: Exécuter les Tests Unitaires
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, 3.10]  # Exécute les tests sur plusieurs versions de Python
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v4
+
+    - name: Installer Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Installer les dépendances
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest
+
+    - name: Exécuter les tests unitaires
+      run: pytest tests/ --tb=short --maxfail=3 -v

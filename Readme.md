@@ -19,10 +19,12 @@ Ce projet est un scanneur de vulnérabilités SSL/TLS développé en Python. Il 
 Acteurs principaux :
 
    -Utilisateur : Lance le scan et reçoit le rapport.
-   -Scanneur SSL/TLS : Exécute l'analyse et détecte les vulnérabilités.
+   -Scanner SSL/TLS : Exécute l'analyse et détecte les vulnérabilités.
    -Nmap : Scanne les ports ouverts.
    -Base de Données des Vulnérabilités : Fournit la liste des vulnérabilités connues.
 
+## Diagramme d'architecture
+![alt text](images/Diagramme_Architecture.png)
 
 ## Prérequis
 - Python 3.6+
@@ -159,7 +161,62 @@ Remplacez `<image-id>` par l'ID de votre image Docker, `<votre-nom-d'utilisateur
 
 ## Test Unitaire 
 
+Cette section décrit la procédure de test unitaire pour le projet de scanner de vulnérabilités SSL/TLS. Les tests couvrent les fonctionnalités principales des fichiers `ssl_tls_scanner.py` et `vulnerability_scanner.py` en utilisant le module `unittest` de Python.
+
+1. Structure des Tests
+- **tests/test_ssl_tls_scanner.py** :
+  - Vérifie l'analyse SSL/TLS, la détection de vulnérabilités et la génération de rapports.
+  - Simule des connexions SSL et des résultats Nmap.
+
+- **tests/test_vulnerability_scanner.py** :
+  - Vérifie la détection des vulnérabilités Heartbleed et POODLE.
+  - Teste le scan des ports et la génération de rapports.
+
+2. Exécution des Tests
+Pour exécuter tous les tests, utilisez la commande suivante à la racine du projet :
+```bash
+pytest tests/
+```
+
+Pour exécuter un fichier de test spécifique :
+```bash
+python -m unittest tests/test_ssl_tls_scanner.py
+python -m unittest tests/test_vulnerability_scanner.py
+```
+
+3. Rapports de Tests
+Pour générer un rapport de test détaillé avec pytest, utilisez :
+```bash
+pytest tests/ --tb=long --maxfail=3 -v
+```
 
 ## GitHub Action
+
+### Structure du Workflow
+Le workflow GitHub Actions permet d'exécuter automatiquement les tests unitaires à chaque push ou pull request sur la branche `main` ou `master`.
+
+### Chemin du Fichier
+`.github/workflows/ci.yml`
+
+### Contenu du Workflow
+- **Nom du workflow :** `CI - Tests Unitaires SSL/TLS Scanner`
+- **Plateforme :** Ubuntu-latest
+- **Versions Python :** 3.8, 3.9, 3.10
+- **Outils :** pytest pour les tests unitaires
+
+### Étapes du Workflow
+1. **Checkout du code** : Récupère le code source du dépôt GitHub.
+2. **Installation de Python** : Configure la version spécifiée de Python.
+3. **Installation des dépendances** : Installe les dépendances listées dans `requirements.txt`.
+4. **Exécution des tests** : Lance `pytest` avec des options de rapport détaillé.
+
+### Lancer le Workflow Manuellement
+Vous pouvez également déclencher le workflow manuellement depuis l'onglet **Actions** de GitHub.
+
+## Ajout du Badge GitHub Actions
+```markdown
+![Tests Unitaires](https://github.com/ANANA1218/SSL-TLS/.github/workflows/ci.yml/badge.svg)
+```
+
 
 
