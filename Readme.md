@@ -16,13 +16,14 @@ Ce projet est un scanner de vulnérabilités SSL/TLS développé en Python. Il p
 ## Diagramme de séquence
 ![alt text](images/Diagramme_sequence.png)
 
-Acteurs principaux :
+## Acteurs principaux
+- Utilisateur : Lance le scan et reçoit le rapport.
+- Scanner SSL/TLS : Exécute l'analyse et détecte les vulnérabilités.
+- Nmap : Scanne les ports ouverts.
+- Base de Données des Vulnérabilités : Fournit la liste des vulnérabilités connues.
 
-   -Utilisateur : Lance le scan et reçoit le rapport.
-   -Scanner SSL/TLS : Exécute l'analyse et détecte les vulnérabilités.
-   -Nmap : Scanne les ports ouverts.
-   -Base de Données des Vulnérabilités : Fournit la liste des vulnérabilités connues.
-
+## Diagramme d'architecture
+![alt text](images/Diagramme_Architecture.png)
 
 ## Prérequis
 - Python 3.6+
