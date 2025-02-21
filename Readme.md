@@ -168,6 +168,34 @@ Remplacez `<image-id>` par l'ID de votre image Docker, `<votre-nom-d'utilisateur
 
 ## Test Unitaire 
 
+Cette section décrit la procédure de test unitaire pour le projet de scanner de vulnérabilités SSL/TLS. Les tests couvrent les fonctionnalités principales des fichiers `ssl_tls_scanner.py` et `vulnerability_scanner.py` en utilisant le module `unittest` de Python.
+
+## Structure des Tests
+- **tests/test_ssl_tls_scanner.py** :
+  - Vérifie l'analyse SSL/TLS, la détection de vulnérabilités et la génération de rapports.
+  - Simule des connexions SSL et des résultats Nmap.
+
+- **tests/test_vulnerability_scanner.py** :
+  - Vérifie la détection des vulnérabilités Heartbleed et POODLE.
+  - Teste le scan des ports et la génération de rapports.
+
+## Exécution des Tests
+Pour exécuter tous les tests, utilisez la commande suivante à la racine du projet :
+```bash
+pytest tests/
+```
+
+Pour exécuter un fichier de test spécifique :
+```bash
+python -m unittest tests/test_ssl_tls_scanner.py
+python -m unittest tests/test_vulnerability_scanner.py
+```
+
+## Rapports de Tests
+Pour générer un rapport de test détaillé avec pytest, utilisez :
+```bash
+pytest tests/ --tb=long --maxfail=3 -v
+```
 
 ## GitHub Action
 
