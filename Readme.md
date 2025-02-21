@@ -5,6 +5,7 @@ Ce projet est un scanneur de vulnérabilités SSL/TLS développé en Python. Il 
 
 ## Architecture du projet
 
+```
 SSL-TLS
 │   .env
 │   .gitignore
@@ -15,16 +16,16 @@ SSL-TLS
 │   ssl_tls_scanner.py
 │   tree.txt
 │   vulnerability_scanner.py
-│   
+│
 ├───.github
 │   └───workflows
 │           ci.yml
-│           
+│
 ├───Diagrammes
 │       Diagramme_Architecture.png
 │       Diagramme_sequence.png
 │       Workflow_Diagram.png
-│       
+│
 ├───images
 │       compose-build.png
 │       compose-up.png
@@ -38,21 +39,22 @@ SSL-TLS
 │       scan2.png
 │       up.png
 │       Workflow_Diagram.png
-│       
+│
 ├───tests
 │   │   test_ssl_tls_scanner.py
 │   │   test_vulnerability_scanner.py
 │   │   __init__.py
-│   │   
+│   │
 │   └───__pycache__
 │           test_ssl_tls_scanner.cpython-310-pytest-8.3.2.pyc
 │           test_ssl_tls_scanner.cpython-310.pyc
 │           test_vulnerability_scanner.cpython-310-pytest-8.3.2.pyc
 │           __init__.cpython-310.pyc
-│           
+│
 └───__pycache__
         ssl_tls_scanner.cpython-310.pyc
         vulnerability_scanner.cpython-310.pyc
+```
         
 
 ## Fonctionnalités
