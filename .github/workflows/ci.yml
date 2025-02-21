@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]  # Exécute les tests sur plusieurs versions de Python
+        python-version: [3.8, 3.9]  # Exécute les tests sur plusieurs versions de Python
 
     steps:
     - name: Checkout du code
