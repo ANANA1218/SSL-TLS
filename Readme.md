@@ -221,7 +221,6 @@ Le workflow GitHub Actions permet d'exécuter automatiquement les tests unitaire
 Vous pouvez également déclencher le workflow manuellement depuis l'onglet **Actions** de GitHub.
 
 ## Ajout du Badge GitHub Actions
-Pour afficher le statut des tests dans votre README, ajoutez cette ligne :
 ```markdown
 ![Tests Unitaires](https://github.com/ANANA1218/SSL-TLS/.github/workflows/ci.yml/badge.svg)
 ```
