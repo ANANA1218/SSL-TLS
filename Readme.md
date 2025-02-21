@@ -64,11 +64,11 @@ SSL-TLS
 - Scan des ports ouverts sur le serveur cible
 - Recommandations pour améliorer la sécurité
 
-##Considérations Légales⚖️
+## Considérations Légales⚖️
 ✅ Respect de la Législation en Cybersécurité 
 📝 Autorisation et Consentement
 🔒 Protection des Données
-##Considérations Éthiques💡
+## Considérations Éthiques💡
 🌱 Renforcement de la Sécurité 
 💼 Utilisation Responsable
 🤝 Partage des Bonnes Pratiques
