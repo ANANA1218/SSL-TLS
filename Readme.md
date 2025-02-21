@@ -3,6 +3,58 @@
 ## Description
 Ce projet est un scanneur de vulnérabilités SSL/TLS développé en Python. Il permet d'analyser la configuration SSL/TLS d'un serveur cible, de détecter les vulnérabilités potentielles et de générer un rapport détaillé. De plus, il intègre une fonctionnalité de scan de ports ouverts en utilisant Nmap.
 
+## Architecture du projet
+
+SSL-TLS
+|   .env
+|   .gitignore
+|   docker-compose.yml
+|   Dockerfile
+|   Readme.md
+|   requirements.txt
+|   ssl_tls_scanner.py
+|   tree.txt
+|   vulnerability_scanner.py
+|   
++---.github
+|   \---workflows
+|           ci.yml
+|           
++---Diagrammes
+|       Diagramme_Architecture.png
+|       Diagramme_sequence.png
+|       Workflow_Diagram.png
+|       
++---images
+|       compose-build.png
+|       compose-up.png
+|       console.png
+|       Diagramme_sequence.png
+|       docker-image.png
+|       docker_login.png
+|       image.png
+|       image1.png
+|       scan1.png
+|       scan2.png
+|       up.png
+|       Workflow_Diagram.png
+|       
++---tests
+|   |   test_ssl_tls_scanner.py
+|   |   test_vulnerability_scanner.py
+|   |   __init__.py
+|   |   
+|   \---__pycache__
+|           test_ssl_tls_scanner.cpython-310-pytest-8.3.2.pyc
+|           test_ssl_tls_scanner.cpython-310.pyc
+|           test_vulnerability_scanner.cpython-310-pytest-8.3.2.pyc
+|           __init__.cpython-310.pyc
+|           
+\---__pycache__
+        ssl_tls_scanner.cpython-310.pyc
+        vulnerability_scanner.cpython-310.pyc
+        
+
 ## Fonctionnalités
 - Analyse de la configuration SSL/TLS d'un serveur
 - Détection de protocoles obsolètes et de suites de chiffrement faibles
