@@ -15,18 +15,27 @@ on:
 jobs:
   test:
     name: Exécuter les Tests Unitaires
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # Utilise une version stable d'Ubuntu
 
     strategy:
       matrix:
         python-version: [3.8, 3.9]  # Exécute les tests sur plusieurs versions de Python
 
     steps:
+    - name: Nettoyer le cache de GitHub Actions
+      uses: geekyeggo/delete-artifact@v2
+      with:
+        name: python
+        token: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Checkout du code
       uses: actions/checkout@v4
 
+    - name: Debug - Afficher les versions de Python disponibles
+      run: ls /opt/hostedtoolcache/Python
+
     - name: Installer Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v4  # Version stable
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -38,3 +47,4 @@ jobs:
 
     - name: Exécuter les tests unitaires
       run: pytest tests/ --tb=short --maxfail=3 -v
+
